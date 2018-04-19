@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新增试卷</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/easydropdown.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/addExamination.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.easydropdown.min.js"></script>
+
+    <script type="text/javascript" src="js/messages_zh.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+    <script type="text/javascript" src="js/addExamination.js"></script>
+</head>
+<body>
+<header>
+    <div id="headerContainer">
+        <div id="ico" class="col-md-3">
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-book"></span>
+                在线考试系统
+            </span>
+        </div>
+        <div id="loginInfo" class="col-md-offset-7 col-md-2">
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-user"></span>
+                小明
+            </span>
+            &nbsp;&nbsp;|&nbsp;
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-off"></span>
+                退出
+            </span>
+
+        </div>
+    </div>
+</header>
+
+<div class="navMenubox">
+    <ul class="navMenu">
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu1"></i> <span class="">题库管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="./addExaminationPaper.html"><span>新增试卷</span></a></li>
+                <li><a href="./addQuestion.html"><span>新增试题</span></a></li>
+                <li><a href="./listExaminationPaper.html"><span>试卷列表</span></a></li>
+                <li><a href="javascript:;"><span>试题列表</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu2"></i> <span class="">成绩管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="javascript:;"><span>学生成绩</span></a></li>
+                <li><a href="javascript:;"><span>阅卷记录</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu3"></i> <span class="">用户管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="javascript:;"><span>学生管理</span></a></li>
+                <li><a href="javascript:;"><span>教师管理</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="content" class="container">
+    <div id="conditionRegion" class="row">
+        <div class="form-group info-control-group col-md-4">
+            <label for="examinationName">试卷名称:</label>
+            <input type="text" class="form-control info-input" name="examinationName" id="examinationName">
+        </div>
+        <div class="form-group info-control-group col-md-offset-2 col-md-4">
+            <label>考试时长:</label>
+            <select class="dropdown" name="examinationTime" id="examinationTime">
+                <option value="90分钟">90分钟</option>
+                <option value="120分钟">120分钟</option>
+                <option value="150分钟">150分钟</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <button id="genernateTest" class="btn btn-primary col-md-offset-9">生成试卷</button>
+    </div>
+    <div id="tableRegion" class="table-responsive row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <!--
+                    <th>难度</th>
+                    <th>科目</th>
+                    <th>来源</th>
+                    <th>题干</th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>答案</th>
+                    <th>解析</th>
+                    <th>操作</th>
+                    -->
+                    <th>
+                        <select id="questionType">
+                            <option value="选择">选择</option>
+                            <option value="填空">填空</option>
+                            <option value="判断">判断</option>
+                            <option value="问答">问答</option>
+                        </select>
+                    </th>
+                    <th>难度</th>
+                    <th>题干</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="questionContent">
+                <!--
+                <tr>
+                    <td>简单</td>
+                    <td>语文</td>
+                    <td>模拟题</td>
+                    <td>唐诗三百首</td>
+                    <td>李白</td>
+                    <td>杜甫</td>
+                    <td>白居易</td>
+                    <td>柳宗元</td>
+                    <td>A</td>
+                    <td>诗仙</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pageControl" class="row">
+        <ul class="pagination col-md-offset-3 col-md-6">
+            <li id="first"><a href="javascript:;">&laquo;</a></li>
+            <li id="previous"><a href="javascript:;">&lt;</a></li>
+            <!--
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            -->
+            <li id="next"><a href="javascript:;">&gt;</a></li>
+            <li id="last"><a href="javascript:;">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--试题详情弹出框-->
+<div class="modal fade" id="questionDetailModal" tabindex="-1" role="dialog" aria-labelledby="labelTitle" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h6 class="modal-title" id="labelTitle">
+                    试题详情
+                </h6>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tbody id="questionDetailContent">
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+</body>
+</html>

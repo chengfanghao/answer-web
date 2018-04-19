@@ -1,0 +1,235 @@
+/* --- RESET --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 18px;
+    vertical-align: baseline;
+}
+
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Tahoma, Geneva, 'Simsun';
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+
+button,input[type=radio],input[type=checkbox]{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+textarea{
+    outline: none;
+    box-shadow: none!important;
+    border: 1px solid #d1d5da !important;
+    width: 89% !important;
+    resize:none;
+}
+
+input[type=text]:focus{
+    outline: none!important;
+    box-shadow: none!important;
+    border: 1px solid #d1d5da !important;
+}
+
+.clearfix:after{
+    content:"."; display:block; height:0; clear:both; visibility:hidden;
+}
+
+.clearfix {
+    display:inline-block;
+}
+
+.clearfix {
+    display:block;
+}
+
+.inline-block{
+    display: inline-block!important;
+}
+
+.cursor-pointor{
+    cursor: pointer;
+}
+
+/*myStyle*/
+/*头部*/
+#headerContainer{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: #337ab7;
+    margin-bottom: 10px;
+    z-index: 100;
+}
+
+#ico{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#loginInfo{
+    color: white;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+/*左侧菜单栏*/
+.navMenubox {
+    position: fixed;
+    left: 0px;
+    top: 40px;
+    display: inline-block;
+    width: 200px;
+    height: 100%;
+    background: #eee;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.navMenu>li{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+.navMenu>li>a {
+    font-weight: bold;
+    background-color: #DDDDDD;
+    display: block;
+    overflow: hidden;
+    padding-left: 0px;
+    line-height: 40px;
+    color: black;
+    transition: all .3s;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navMenu > li:nth-of-type(1)> a {
+    border-top: 1px solid transparent;
+}
+
+.navMenu > li:last-child > a {
+    border-bottom: 1px solid transparent;
+}
+
+.navMenu>li>a>i {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+    font-size: 20px;
+    float: left;
+    font-style: normal;
+    margin: 0 5px;
+}
+
+.navMenu li a .arrow:before {
+    display: block;
+    float: right;
+    margin-top: 1px;
+    margin-right: 15px;
+    display: inline;
+    font-size: 16px;
+    font-family: FontAwesome;
+    height: auto;
+    content: "\f105";
+    font-weight: 300;
+    text-shadow: none;
+}
+
+.navMenu li a .arrow.open:before {
+    float: right;
+    margin-top: 1px;
+    margin-right: 15px;
+    display: inline;
+    font-family: FontAwesome;
+    height: auto;
+    font-size: 16px;
+    content: "\f107";
+    font-weight: 300;
+    text-shadow: none;
+}
+
+.navMenu>li>ul.sub-menu, .navMenu>li>ul.sub-menu>li>ul.sub-menu {
+    display: none;
+    list-style: none;
+    clear: both;
+    padding-bottom: 5px;
+}
+
+.navMenu>li>ul.sub-menu li {
+    background: none;
+    padding: 0px;
+}
+
+.navMenu>li>ul.sub-menu li>a {
+    display: block;
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 27px;
+    color: black;
+    clear: both;
+}
+
+.navMenu>li>ul.sub-menu li>a.active, .navMenu>li>ul.sub-menu li>a:hover, .navMenu>li>ul.sub-menu>li.active >a {
+    background-color: white;
+    text-decoration: none;
+}
+
+.icon-menu1:before {
+    font-family: FontAwesome;
+    content: "	\f1c0";
+}
+
+.icon-menu2:before {
+    font-family: FontAwesome;
+    content: "\f19d";
+}
+
+.icon-menu3:before {
+    font-family: FontAwesome;
+    content: "\f0c0";
+}

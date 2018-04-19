@@ -1,0 +1,88 @@
+#content{
+    display: inline-block;
+    margin-left: 260px;
+    margin-top: 45px;
+}
+
+.info-control-group{
+    padding-left: 0px;!important;
+    font-size: 18px;
+    line-height: 40px;
+    vertical-align:middle;
+}
+
+.info-input{
+    width: 65.2%;
+    display: inline-block;
+}
+
+.dropdown{
+    width: 65%;
+}
+
+#tableRegion{
+    width: 85%;
+    max-width: 85%;
+}
+
+#questionContent tr td{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 750px;
+}
+
+td input[type='checkbox']{
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+}
+
+#questionContent tr:hover{
+    background-color: #337ab7;
+    color: white;
+}
+
+#questionType{
+    border: 0;
+    cursor: pointer;
+}
+
+#questionType:focus{
+    outline: none;
+}
+
+.question-title{
+    cursor: pointer;
+}
+/*查看按钮*/
+.question-info{
+    color: black;
+    font-size: 18px;
+    text-decoration: underline;
+    vertical-align: middle;
+}
+
+.question-info:hover{
+    color: white;
+}
+
+.modal-header,.modal-body{
+    padding: 5px;
+    font-size: 16px;
+}
+
+.modal-header h6{
+    font-weight: bold;
+}
+
+#questionDetailContent tr td:first-child{
+    text-align: right;
+}
+
+#questionDetailContent tr td{
+    word-wrap:break-word;
+    word-break:break-all;
+    max-width: 480px;
+    vertical-align: top;
+}

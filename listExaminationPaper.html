@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>新增试题</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/easydropdown.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/listExaminationPaper.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.easydropdown.min.js"></script>
+
+    <script type="text/javascript" src="js/messages_zh.js"></script>
+    <script type="text/javascript" src="js/popper.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+
+    <script type="text/javascript" src="js/listExaminationPaper.js"></script>
+</head>
+<body>
+<header>
+    <div id="headerContainer">
+        <div id="ico" class="col-md-3">
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-book"></span>
+                在线考试系统
+            </span>
+        </div>
+        <div id="loginInfo" class="col-md-offset-7 col-md-2">
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-user"></span>
+                小明
+            </span>
+            &nbsp;&nbsp;|&nbsp;
+            <span class="cursor-pointor">
+                <span class="glyphicon glyphicon-off"></span>
+                退出
+            </span>
+
+        </div>
+    </div>
+</header>
+
+<div class="navMenubox">
+    <ul class="navMenu">
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu1"></i> <span class="">题库管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="./addExaminationPaper.html"><span>新增试卷</span></a></li>
+                <li><a href="./addQuestion.html"><span>新增试题</span></a></li>
+                <li><a href="./listExaminationPaper.html"><span>试卷列表</span></a></li>
+                <li><a href="javascript:;"><span>试题列表</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu2"></i> <span class="">成绩管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="javascript:;"><span>学生成绩</span></a></li>
+                <li><a href="javascript:;"><span>阅卷记录</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;" class="afinve"> <i class="icon-menu3"></i> <span class="">用户管理</span> <span
+                    class="arrow"></span> </a>
+            <ul class="sub-menu">
+                <li><a href="javascript:;"><span>学生管理</span></a></li>
+                <li><a href="javascript:;"><span>教师管理</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div id="examinationPaperList">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>试卷名称</th>
+                        <th>考试时长</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="examinationPaperContent">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form id="paperForm" style="display: none">
+            <section>
+                <h4>
+                    一、选择题
+                </h4>
+                <div id="singleChoiceRegion">
+                    <div>
+                        <p>
+                            1.五四运动的直接导火索是（ ）。
+                        </p>
+                        <p>
+                            <input type="radio" name="singleChoice1" required>A . 帝国主义对中国的侵略
+                        </p>
+                        <p>
+                            <input type="radio" name="singleChoice1" required>B . 帝国主义对中国的侵略
+                        </p>
+                        <p>
+                            <input type="radio" name="singleChoice1" required>C . 帝国主义对中国的侵略
+                        </p>
+                        <p>
+                            <input type="radio" name="singleChoice1" required>D . 帝国主义对中国的侵略
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>
+                    二、填空题
+                </h4>
+                <div id="blankRegion">
+                    <div>
+                        <p>1.辛亥革命的时间是____</p>
+                        <textarea rows="3" required></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>
+                    三、判断题
+                </h4>
+                <div id="judgeRegion">
+                    <div>
+                        <p>1.地球是圆的。</p>
+                        <p><input type="radio" name="judge1" required>正确</p>
+                        <p><input type="radio" name="judge1" required>错误</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>
+                    四、问答题
+                </h4>
+                <div id="essayRegion">
+                    <div>
+                        <p>1.辛亥革命的意义是什么?</p>
+                        <textarea rows="6" required></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <div class="col-md-offset-4">
+                <button id="submitExaminationPaper" class="btn btn-primary">提交试卷</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="timer" style="display: none">
+    <span class="glyphicon glyphicon-time"></span>
+    <strong id="hourShow">00:</strong>
+    <strong id="minuteShow">00:</strong>
+    <strong id="secondShow">00</strong>
+</div>
+</body>
+</html>
